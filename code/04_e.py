@@ -6,11 +6,12 @@ file_path = r'F:\机器学习\machinelearning_hw_cqut\MachineLearning_HW_CQUT\HW
 raw_data = pd.read_excel(file_path, dtype=float, header=None)
 print(raw_data.shape)
 
-data= raw_data.reshape(47,3)
 
-data_norm =data.copy()
-print(data_norm)
+data = np.array(raw_data, dtype=int)
 
 
+train_data=data.copy()
+x_train = train_data[:,:2]
+y_train = train_data[:, 2]
 
-
+print(y_train)
